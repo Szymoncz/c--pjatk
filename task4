@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int a,b,c, maks;
+
+int main() {
+  cout << "Podaj 3 liczby rozdzielone spacją: ";
+  cin>>a>>b>>c;
+  
+    maks=a;
+    if (b>maks) maks=b;
+    if (c>maks) maks=c;
+    
+    cout << "Największa liczba z podanych to: "<< maks << endl;
+    
+    
+    return 0;
+    }

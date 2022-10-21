@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int number;
+  cout << "Podaj liczbę całkowitą: ";
+  cin >> number;
+  
+  if (number > 0) {
+    cout << "Wpisana liczba: " << number << " jest dodatnia" << endl;
+  } else if (number < 0) {
+    cout << "Wpisana liczba: " << number << " jest ujemna" << endl;
+    } 
+    else {
+    cout << "Podana liczba jest równa 0" << endl;}
+    
+    return 0;
+    }

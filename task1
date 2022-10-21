@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+string name;
+name = "Szymon";
+string number;
+number = "s26858";
+string university;
+university = "PJATK";
+
+
+    cout<<name<<endl;
+    cout<<number<<endl;
+    cout<<university<<endl;
+    
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int number;
+  cout << "Podaj liczbę całkowitą: ";
+  cin >> number;
+  
+  if (number %2 == 0 && number != 0) {
+    cout << "Wpisana liczba: " << number << " jest parzysta" << endl;
+  } else if (number%2 != 0 & number != 0){
+    cout << "Wpisana liczba: " << number << " jest nieparzysta" << endl;
+    } else {
+        cout << "Podana liczba to " << number << endl;
+    }
+    
+    
+    return 0;
+    }

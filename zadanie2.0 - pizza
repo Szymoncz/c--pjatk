@@ -11,7 +11,10 @@ int main()
     cout<<"Podaj liczbę kawałków ";
     cin>>piece;
 
-    
+    if (piece<guest) {
+        cout << "Za malo kawalkow - podaj wieksza liczbe kawalkow: ";
+        cin >> piece;
+    }
     cout<<"Każdy z gości dostanie po "<<piece/guest<<endl;
     cout<<"Organizator dostanie "<<piece%guest<<endl;
 

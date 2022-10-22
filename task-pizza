@@ -11,12 +11,9 @@ int main()
     cout<<"Podaj liczbę kawałków ";
     cin>>piece;
 
-    if(guest==piece) {
-        cout<<"Każdy z gości dostanie po "<<piece<<" kawałków"<<endl;
-    } else if (guest / piece) {
-        cout<<"Każdy z gości dostanie po "<<piece;
-    }
-
+    
+    cout<<"Każdy z gości dostanie po "<<piece/guest<<endl;
+    cout<<"Organizator dostanie "<<piece%guest<<endl;
 
     return 0;
 }

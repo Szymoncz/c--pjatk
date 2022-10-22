@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int guest, piece;
+
+int main()
+{
+    cout<<"Podaj liczbę gości ";
+    cin>>guest;
+    cout<<"Podaj liczbę kawałków ";
+    cin>>piece;
+
+    if(guest==piece) {
+        cout<<"Każdy z gości dostanie po "<<piece<<" kawałków"<<endl;
+    } else if (guest / piece) {
+        cout<<"Każdy z gości dostanie po "<<piece;
+    }
+
+
+    return 0;
+}

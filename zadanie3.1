@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+
+int main()
+{
+
+float x;
+float y;
+float sum;
+float del;
+float mult;
+float divide;
+  cout<<"Podaj liczbę x \n";
+  cin>>x;
+  cout<<"Podaj liczbę y \n";
+  cin>>y;
+
+sum = x + y;
+del = x - y;
+mult = x * y;
+divide = x / y;
+
+cout<<"Suma x i y wynosi "<<setprecision(2)<<sum<<endl;
+cout<<"Roznica x i y wynosi "<<setprecision(2)<<del<<endl;
+cout<<"Mnozenie x i y wynosi "<<mult<<endl;
+cout<<"Dzielenie x przez y wynosi "<<setprecision(2)<<divide<<endl;

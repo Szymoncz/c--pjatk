@@ -6,12 +6,10 @@ using namespace std;
 int main()
 {
 
-float x;
-float y;
-float sum;
-float del;
-float mult;
-float divide;
+float x, y, sum, del, mult, divide;
+
+cout << fixed << showpoint;
+cout << setprecision(2);
   cout<<"Podaj liczbę x \n";
   cin>>x;
   cout<<"Podaj liczbę y \n";
@@ -22,7 +20,7 @@ del = x - y;
 mult = x * y;
 divide = x / y;
 
-cout<<"Suma x i y wynosi "<<setprecision(2)<<sum<<endl;
-cout<<"Roznica x i y wynosi "<<setprecision(2)<<del<<endl;
+cout<<"Suma x i y wynosi "<<sum<<endl;
+cout<<"Roznica x i y wynosi "<<del<<endl;
 cout<<"Mnozenie x i y wynosi "<<mult<<endl;
-cout<<"Dzielenie x przez y wynosi "<<setprecision(2)<<divide<<endl;
+cout<<"Dzielenie x przez y wynosi "<<divide<<endl;

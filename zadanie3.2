@@ -1,1 +1,19 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
 
+int main()
+{
+    char a;
+    cout<<"Program wyswietlajacy na ekranie znaki podane z klawiatury az do podania znaku t"<<endl;
+    cout<<"Wcisnij klawisz ";
+    cin >> a;
+    while (a!='t')
+    {
+        cout<<"Podaj kolejny znak"<<endl;
+        cin>>a;
+    }
+    cout<<" Podales "<< a << "program zakonczony";
+    
+    return 0;
+}

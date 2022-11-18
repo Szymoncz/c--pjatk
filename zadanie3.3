@@ -1,28 +1,36 @@
-#include<iostream>
+ #include <iostream> 
+ #include <cmath> 
+ using namespace std; 
 
-using namespace std;
+ int main() 
+ { 
+ double a,b,c,Delta; 
+ cout << "Program obliczający pierwiastki funkcji kwadratowej o wzorze: ax^2 + bx + c"<<endl;
+ cout << "Podaj wspolczynnik a: "; 
+ cin >> a; 
+ cout << "Podaj wspolczynnik b: "; 
+ cin >> b; 
+ cout << "Podaj wspolczynnik c: "; 
+ cin >> c; 
+ cout <<a<<"x^2 +"<<b<<"x +"<<c<<endl;
+ Delta=(b*b)-(4*a*c); 
+ if (a == 0) 
+ cout << "To nie jest funkcja kwadratowa " << 0; 
 
-void PascalsTriangle(int n) {
+ else 
+ if (Delta<0) 
+ cout << "Ta funkcja nie ma punktu przeciecia z osia X. Jej wspolrzedne wierzcholka to: " << "(" <<-b/(2*a )<< "," << (4*a)<<")"; 
+ else 
+ if (Delta>0) 
+ {
+ cout << "Ta funkcja ma 2 rozne pierwiastki rzeczywiste: " <<"X1= "<<(-b-sqrt(Delta))/(2*a)<<" oraz X2= "<<(-b+sqrt(Delta))/(2*a)<<endl; 
+ cout << "Wspolrzedne wierzcholka to: " <<"("<<-b/(2*a)<<","<< (4*a)<<")"; 
+ }
+ else 
+ cout << "Ta funkcja ma tylko 1 rozwiazanie: " << "("<<-b/(2*a)<<","<< (4*a)<<")"; 
+ cout << endl; 
 
-  for (int i = 1; i <= n; i++) {
-    int coef = 1;
-    for (int k = n - i; k > 0; k--) {
-      cout << " ";
-    }
-    for (int j = 1; j <= i; j++) {
-      cout << coef << " ";
-      coef = coef * (i - j) / j;
-
-    }
-    cout << endl;
-  }
-}
-
-int main() {
-  int num;
-  cout << "Podaj liczbę wierszy w trojkacie Pascala :" << endl;
-  cin >> num;
-  PascalsTriangle(num);
-
-  return 0;
-}
+ cin.ignore(); 
+ getchar(); 
+ return 0; 
+ }

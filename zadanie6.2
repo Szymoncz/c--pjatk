@@ -1,1 +1,74 @@
+#include<iostream>
 
+using namespace std;
+
+struct student
+{
+    char name[12];
+    int informatyka, chemia, angielski, polski;
+};
+
+int main()
+{
+    student point_array[6];
+
+    for (int i = 0; i < 6; i++)
+    {
+        cout << "Wpisz imie studenta nr " << i + 1 << ": ";
+        cin >> point_array[i].name;
+        cout << "Wpisz ocene z informatyki: ";
+        cin >> point_array[i].informatyka;
+        cout << "Wpisz ocene z chemii: ";
+        cin >> point_array[i].chemia;
+        cout << "Wpisz ocene z angielskiego: ";
+        cin >> point_array[i].angielski;
+        cout << "Wpisz ocene z polskiego: ";
+        cin >> point_array[i].polski;
+    }
+
+    int question_number;
+    cout << "Wpisz ilosc zapytan: ";
+    cin >> question_number;
+
+    int number, subject;
+
+    while (question_number--)
+    {
+        cout << "Podaj nr studenta [1.." << 6 << "]: ";
+        cin >> number;
+        --number;
+        if ((number < 0) || (number >= 6))
+        {
+            cout << "W systemie brak ucznia o podanym numerze. Podaj cyfre od 1 do 6 " << endl;
+            continue;
+        }
+        cout << "Podaj nr przedmiotu [0..3]: ";
+        cin >> subject;
+        if ((subject < 0) || (subject>3))
+        {
+            cout << "Nie ma przedmiotu w systemie o podanym numerze. Wpisz liczbe 0 - 3 " << endl;
+            continue;
+        }
+
+        switch (subject)
+        {
+            case 0:
+                cout << "Student: " << point_array[number].name << ", ocena - informatyka: "
+                     << point_array[number].informatyka << endl;
+                break;
+            case 1:
+                cout << "Student: " << point_array[number].name << ", ocena - chemia: "
+                     << point_array[number].chemia << endl;
+                break;
+            case 2:
+                cout << "Student: " << point_array[number].name << ", ocena - angielski: "
+                     << point_array[number].angielski << endl;
+                break;
+            case 3:
+                cout << "Student: " << point_array[number].name << ", ocena - polski: "
+                     << point_array[number].polski << endl;
+                break;
+        }
+    }
+    return 0;
+}

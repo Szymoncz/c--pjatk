@@ -1,1 +1,56 @@
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
 
+using namespace std;
+
+int main()
+{
+    int my_array[10][10];
+    int a = 10;
+    int b = 10;
+
+    for (int ar_column = 0; ar_column < a; ar_column++)
+    {
+        for (int ar_row = 0; ar_row < a; ar_row++)
+        {
+            if (ar_column == 0)
+            {
+                my_array[ar_column][ar_row] = ar_row;
+            }
+            else if (ar_column == 1)
+            {
+                my_array[ar_column][ar_row] = ar_row + ar_row;
+            }
+            else if (ar_column == 2)
+            {
+                my_array[ar_column][ar_row] = ar_row * ar_row;
+            }
+            else if (ar_column == 3)
+            {
+                my_array[ar_column][ar_row] = ar_row + ar_column;
+            }
+            else if (ar_column == 4)
+            {
+                my_array[ar_column][ar_row] = ar_row - ar_column;
+            }
+            else
+            {
+                my_array[ar_column][ar_row] = 0;
+            }
+        }
+    }
+
+    cout << "Gotowa tablica (1 kolumna liczby od 0 do 9 a 2 suma tych liczb): " << endl;
+
+    for (int ar_row = 0; ar_row < a; ar_row++)
+    {
+        for (int ar_column = 0; ar_column < a; ar_column++)
+        {
+            cout << setw(4) << my_array[ar_column][ar_row];
+        }
+        cout << endl;
+    }
+
+    return 0;
+}

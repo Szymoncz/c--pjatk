@@ -1,1 +1,29 @@
+#include <iostream>
 
+using namespace std;
+
+int my_numbers(int n);
+int main()
+{
+    int n;
+    cout << "Wpisz liczbe naturalna: ";
+    cin >> n;
+    cout << endl << my_numbers(n) << " liczb jest mniejszych od n - podzielne przez 5 ale nie przez 3."<< endl;
+
+    return 0;
+}
+
+int my_numbers(int n) {
+    if (n < 0)
+    {
+        return 0;
+    }
+    else if ((n % 5 == 0) && (n % 3 != 0))
+    {
+        return 1 + my_numbers(n - 1);
+    }
+    else {
+        my_numbers(n - 1);
+    }
+    return 0;
+}

@@ -1,1 +1,26 @@
+#include <iostream>
+#include <string.h>
 
+using namespace std;
+
+int main()
+{
+    string text, concat;
+    int a;
+
+    cout << "Wprowadź tekst do konkatenacji ";
+    cin >> text;
+    cout << "Wpisz liczbe konkatenacji ";
+    cin >> a;
+
+    for (int i = 0; i < a; i++)
+    {
+       concat += text;
+    }
+
+    cout << endl << "Twoj tekst " << text << endl;
+    cout << "Twoj tekst po " << a << " konkatenacjach:" <<endl;
+    cout << concat << endl;
+
+    return 0;
+}

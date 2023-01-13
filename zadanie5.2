@@ -1,1 +1,56 @@
+#include <iostream>
 
+using namespace std;
+
+int main()
+{
+    int my_array[7][7], a, b;
+    int i, j, k;
+
+    cout << "Wpisz liczbe wierszy (maks 7): "<< endl;
+    cin >> a;
+    cout << "Wpisz liczbe kolumn (maks 7): "<< endl;
+    cin >> b;
+
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            cout << "Wpisz element " << i + 1 << " wiersza oraz " << j + 1 << " kolumny: " << endl;
+            cin>> my_array[i][j];
+        }
+    }
+
+    cout << endl << "Wejsciowa tablica to:" << endl;
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            cout << my_array[i][j] << " ";
+
+        }
+        cout << endl;
+    }
+
+    for (i = 0; i < a; i++)
+    {
+        for (j = 0; j < b / 2; j++)
+        {
+            k = my_array[i][j];
+            my_array[i][j] = my_array[i][(b - 1) - j];
+            my_array[i][(b - 1) - j] = k;
+        }
+    }
+
+    cout << endl << "Wyjsciowa tablica to:" << endl;
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            cout << my_array[i][j] << " ";
+            
+        }
+        cout << endl;
+    }
+    return 0;
+}

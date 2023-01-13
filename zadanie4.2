@@ -1,1 +1,41 @@
+#include <iostream>
+using namespace std;
 
+int main()
+{
+    int* pointer;
+    int ra;
+
+    cout << "Wpisz rozmiar tablicy " << endl;
+    cin >> ra;
+
+    pointer = new int[ra];
+
+    for (int i = 0; i < ra; i++)
+    {
+        cout << "Wpisz " << i + 1 << " element" << endl;
+        cin >> pointer[i];
+    }
+    int maks_number = 0;
+    int maks_frequency;
+
+    for (int i = 0; i < ra; i++)
+    {
+        int ar_number = 0;
+        for (int k = 0; k < ra; k++)
+        {
+            if (pointer[i] == pointer[k])
+            {
+                ar_number++;
+            }
+        }
+
+        if (ar_number > maks_number)
+        {
+            maks_number = ar_number;
+            maks_frequency = pointer[i];
+        }
+    }
+    cout << endl << "Najczęstszy element tablicy to  " << maks_frequency << endl;
+    return 0;
+}

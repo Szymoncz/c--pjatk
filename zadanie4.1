@@ -1,1 +1,28 @@
+#include <iostream>
+using namespace std;
 
+int main() {
+
+        int* pointer;
+        int ra, maks=0;
+
+    cout << "Wpisz rozmiar tablicy" << endl;
+    cin >> ra;
+    pointer = new int[ra];
+
+    for (int i = 0; i < ra; i++)
+        {
+        cout << "Wpisz " << i + 1 << " element" << endl;
+        cin >> pointer[i];
+
+        if (maks < pointer[i])
+            {
+            maks = pointer[i];
+            }
+        }
+    cout << "Największy element tablicy to " << maks << endl;
+
+  
+
+    return 0;
+}
